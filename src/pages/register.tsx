@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { InputField } from "@/components/ui/inputField";
 import { Btn } from "@/components/ui/button";
+import AuthLink from "@/components/ui/authLink";
 
 type RegisterForm = {
     name: string;
@@ -62,9 +63,9 @@ export default function RegisterPage() {
         <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-6"
+                className="bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-6"
             >
-                <h2 className="text-3xl font-bold text-center text-green-700">Register</h2>
+                <h2 className="text-3xl font-bold text-center text-grey-700">Register</h2>
 
                 <InputField
                     labelText="Full Name"
@@ -84,7 +85,7 @@ export default function RegisterPage() {
                     validationRules={{
                         required: "Email is required",
                         pattern: {
-                            value: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/,
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                             message: "Invalid email address",
                         },
                     }}
@@ -126,7 +127,13 @@ export default function RegisterPage() {
                     btnName={isLoading ? "Registering..." : "Register"}
                     className="w-full"
                 />
+                <AuthLink
+                    text="Already have an account?"
+                    linkText="Log in"
+                    href="/login"
+                />
             </form>
+
         </div>
     );
 }

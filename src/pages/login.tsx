@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { InputField } from "@/components/ui/inputField";
 import { Btn } from "@/components/ui/button";
+import AuthLink from "@/components/ui/authLink";
 
 type LoginForm = {
     name: string;
@@ -25,16 +26,12 @@ export default function LoginPage() {
     } = useForm<LoginForm>();
 
     const onSubmit = async (data: LoginForm) => {
-        if (data.password !== data.confirmPassword) {
-            setServerError("Passwords do not match");
-            return;
-        }
 
         setServerError('');
         setIsLoading(true);
 
         try {
-            const res = await fetch('/api/auth/register', {
+            const res = await fetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -62,11 +59,9 @@ export default function LoginPage() {
         <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-6"
+                className="bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-6"
             >
-                <h2 className="text-3xl font-bold text-center text-green-700">Login</h2>
-
-
+                <h2 className="text-3xl font-bold text-center text-grey-700">Login</h2>
 
                 <InputField
                     labelText="Email"
@@ -77,7 +72,7 @@ export default function LoginPage() {
                     validationRules={{
                         required: "Email is required",
                         pattern: {
-                            value: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/,
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                             message: "Invalid email address",
                         },
                     }}
@@ -106,6 +101,11 @@ export default function LoginPage() {
                     disabled={isLoading}
                     btnName={isLoading ? "Logining..." : "Login"}
                     className="w-full"
+                />
+                <AuthLink
+                    text="Do'nt have an account?"
+                    linkText="Sign up"
+                    href="/register"
                 />
             </form>
         </div>
