@@ -32,7 +32,7 @@ export default function DashboardPage({ user }: { user: any }) {
 
     return (
         <div className="p-4">
-            <h1 className="text-xl font-bold">Welcome, {user?.email}</h1>
+            <h1 className="text-xl font-bold">Welcome, {user?.name}</h1>
         </div>
     );
 }

@@ -15,3 +15,40 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## File Structure
+/src
+├── /pages
+│   ├── /api
+│   │   ├── /auth
+│   │   │   ├── login.ts
+│   │   │   └── register.ts
+│   │   ├── /boards
+│   │   │   ├── index.ts       // GET all, POST new board
+│   │   │   └── [id].ts        // GET, PUT, DELETE a single board
+│   │   ├── /tasks
+│   │   │   ├── index.ts       // GET all tasks (for a board), POST task
+│   │   │   └── [id].ts        // GET, PUT, DELETE a task
+│   ├── _app.tsx               // Global wrapper + Tailwind CSS import
+│   ├── index.tsx              // Redirect to login or dashboard
+│   ├── login.tsx              // Login form
+│   ├── register.tsx           // Registration form
+│   ├── dashboard.tsx          // Protected page for listing boards
+│   └── board/[id].tsx         // Tasks within a board (e.g., Work, Grocery)
+│
+├── /components
+│   ├── BoardCard.tsx          // UI for showing board tiles
+│   ├── TaskCard.tsx           // UI for each task
+│   └── Navbar.tsx             // Logged-in navbar
+│
+├── /lib
+│   ├── auth.ts                // JWT verify/generate, getUserFromRequest()
+│   ├── db.ts                  // JSON object or in-memory data
+│   └── utils.ts               // Helper functions (optional)
+│
+├── /types
+│   ├── user.ts                // User type/interface
+│   ├── board.ts               // Board type
+│   └── task.ts                // Task type
+│
+tailwind.config.js
+postcss.config.js
