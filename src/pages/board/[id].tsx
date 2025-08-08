@@ -7,7 +7,10 @@ import TaskCard from "@/components/TaskCard";
 import { Board } from "@/types/board";
 import { Task } from "@/types/task";
 
-export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  params,
+}) => {
   const user = getUserFromRequest(req);
   if (!user) {
     return {
@@ -30,9 +33,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     return { notFound: true };
   }
 
-
-  //dynamically creating api base route 
-  //because this code runs on the server during SSR (Server Side Rendering) 
+  //dynamically creating api base route
+  //because this code runs on the server during SSR (Server Side Rendering)
   //Unlike the browser Node.js does not know what /api/boards means because that is a relative path.
   const protocol = req.headers["x-forwarded-proto"] || "http";
   const host = req.headers.host;
@@ -43,7 +45,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     headers: { "Content-Type": "application/json" },
   });
   board = await response.json();
-  const tasksRes = await fetch(`${baseUrl}/api/tasks?userId=${user.id}&boardId=${boardId}`);
+  const tasksRes = await fetch(
+    `${baseUrl}/api/tasks?userId=${user.id}&boardId=${boardId}`
+  );
   const tasksData = await tasksRes.json();
 
   return {
@@ -69,13 +73,16 @@ export default function BoardPage({
   const [newTaskTitle, setNewTaskTitle] = useState("");
   const [newTaskDescription, setNewTaskDescription] = useState("");
   const [newTaskDueDate, setNewTaskDueDate] = useState("");
+  const [isAdding, setIsAdding] = useState(false);
 
   useEffect(() => {
     if (!user) router.push("/login");
   }, [user]);
 
   const handleCreateTask = async () => {
-    if (!newTaskTitle.trim()) return;
+    if (!newTaskTitle.trim() || isAdding) return;
+
+    setIsAdding(true);
 
     try {
       const response = await fetch("/api/tasks", {
@@ -99,6 +106,8 @@ export default function BoardPage({
       }
     } catch (error) {
       console.error("Failed to create task:", error);
+    } finally {
+      setIsAdding(false); // Re-enable the button
     }
   };
 
@@ -198,9 +207,13 @@ export default function BoardPage({
               </div>
               <button
                 onClick={handleCreateTask}
-                className="w-full sm:w-auto bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 text-sm sm:text-base"
+                disabled={isAdding}
+                className={`w-full sm:w-auto px-4 py-2 rounded text-sm sm:text-base text-white ${isAdding
+                    ? "bg-green-300 cursor-not-allowed"
+                    : "bg-green-500 hover:bg-green-600"
+                  }`}
               >
-                Add Task
+                {isAdding ? "Adding..." : "Add Task"}
               </button>
             </div>
           </div>
@@ -210,7 +223,9 @@ export default function BoardPage({
         <div className="space-y-3">
           {tasks.length === 0 ? (
             <div className="text-center py-8">
-              <p className="text-gray-500">No tasks yet. Add one to get started!</p>
+              <p className="text-gray-500">
+                No tasks yet. Add one to get started!
+              </p>
             </div>
           ) : (
             tasks.map((task) => (
@@ -224,7 +239,6 @@ export default function BoardPage({
           )}
         </div>
       </main>
-
     </div>
   );
 }
