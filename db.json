@@ -1,16 +1,10 @@
 {
   "users": [
     {
-      "id": "1754633181437",
+      "id": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "name": "John Doe",
       "email": "johndoe@gmail.com",
       "password": "$2b$10$nQ5mTISSp2UuWVKUWuRM5.ha6C2tdpBVzKaXU/w2gN0ZaELoIfh9e"
-    },
-    {
-      "id": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
-      "name": "Chandra Prakash",
-      "email": "chintusitlani09@gmail.com",
-      "password": "$2b$10$C6oZvijsATksLHgwkJqHjee80f57pTh2JCbgYnT4r0K/IZkJ5zjBO"
     }
   ],
   "tasks": [
@@ -18,7 +12,7 @@
       "id": "1f724e08-e318-4ce2-877a-1a4a918d2751",
       "title": "Go for a quick walk",
       "boardId": "419a7772-9c18-4d83-b608-5edd51e235cf",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "go for a quick evening walk for 10 min. complete atleast 4000 steps",
       "dueDate": "2025-08-10",
       "createdAt": "2025-08-08T06:41:02.266Z",
@@ -28,7 +22,7 @@
       "id": "b8d0a388-30ab-420e-8471-3274316edbc9",
       "title": "Work on design",
       "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "Work on design of the json project",
       "dueDate": "2025-08-13",
       "createdAt": "2025-08-08T06:56:53.894Z",
@@ -38,7 +32,7 @@
       "id": "a26a45ca-deb9-4ea2-8ff7-cb09f406e2cc",
       "title": "Create Git Repo",
       "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "Create git repo for the project",
       "dueDate": "2025-08-12",
       "createdAt": "2025-08-08T06:57:21.302Z",
@@ -48,7 +42,7 @@
       "id": "4ab04dee-bdf0-475f-845f-e898fd6893c7",
       "title": "Add JWT auth",
       "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "Add JWT auth for users authentication",
       "dueDate": "2025-08-21",
       "createdAt": "2025-08-08T06:58:06.109Z",
@@ -58,7 +52,7 @@
       "id": "d88aebae-f601-4091-b90f-ed15bf6f107b",
       "title": "Get Requirement",
       "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "Get requirement from the client for the projects",
       "dueDate": "2025-08-12",
       "createdAt": "2025-08-08T06:58:58.364Z",
@@ -68,7 +62,7 @@
       "id": "7f716d45-13d1-4905-8e88-299340c86b02",
       "title": "Delegate Task to others",
       "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "-Delegate task \n--DataBase setup delegate to Deepak\n--Backend and server setup to vishal and mansi ",
       "dueDate": "2025-08-29",
       "createdAt": "2025-08-08T06:59:13.001Z",
@@ -78,10 +72,100 @@
       "id": "1787ffb7-ee7a-4355-8aa1-2443d0c1ce66",
       "title": "Get Client Review",
       "boardId": "db076f40-92b2-4a4c-b864-c95549a46cf0",
-      "userId": "1754633181437",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
       "description": "Get Client review on new designs",
       "dueDate": "2025-08-16",
       "createdAt": "2025-08-08T07:01:40.109Z",
+      "completed": false
+    },
+    {
+      "id": "3d2a65c5-dccf-4562-91b6-e717bcb7bb7b",
+      "title": "Create Presentation Draft",
+      "boardId": "b1d7c92f-69a2-4ac2-9498-4c6b8f914678",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Prepare the initial draft for the presentation",
+      "dueDate": "2025-08-12",
+      "createdAt": "2025-08-08T08:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "c84635b5-8b8e-4f0b-91c7-8351db6b933f",
+      "title": "Review Presentation with Team",
+      "boardId": "b1d7c92f-69a2-4ac2-9498-4c6b8f914678",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Discuss the draft presentation with the team for feedback",
+      "dueDate": "2025-08-14",
+      "createdAt": "2025-08-08T08:10:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "e1a65a9f-3a1b-4d7f-aef7-45e3c67efb9c",
+      "title": "Finalize Presentation Design",
+      "boardId": "b1d7c92f-69a2-4ac2-9498-4c6b8f914678",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Finalize design elements and layout for the presentation",
+      "dueDate": "2025-08-16",
+      "createdAt": "2025-08-08T08:20:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "1b8ff309-cf77-40f9-9f6c-d9a16506c092",
+      "title": "Define Target Audience",
+      "boardId": "ec9123b1-cf73-4fa0-9234-51c8ff2de16c",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Identify and define the target audience for the marketing campaign",
+      "dueDate": "2025-08-13",
+      "createdAt": "2025-08-08T08:30:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "d1d03857-60d1-4714-8e93-69a94579f0a3",
+      "title": "Develop Marketing Channels Strategy",
+      "boardId": "ec9123b1-cf73-4fa0-9234-51c8ff2de16c",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Decide on channels for marketing (social media, email, etc.)",
+      "dueDate": "2025-08-16",
+      "createdAt": "2025-08-08T08:40:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "50a3f61f-2461-4701-9f16-099edec864b1",
+      "title": "Allocate Budget for Campaigns",
+      "boardId": "ec9123b1-cf73-4fa0-9234-51c8ff2de16c",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Allocate the budget for various marketing campaigns",
+      "dueDate": "2025-08-18",
+      "createdAt": "2025-08-08T08:50:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "4b2739f7-64de-47f2-9287-e820a123b598",
+      "title": "Organize Weekly Stand-Up",
+      "boardId": "72c3ddeb-2e5b-4725-90c2-cfc745a8ff8f",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Schedule and conduct weekly team stand-up meetings",
+      "dueDate": "2025-08-10",
+      "createdAt": "2025-08-08T09:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "5c3ea35d-7bba-4b30-a3b0-463a0b8f7c10",
+      "title": "Assign Team Roles",
+      "boardId": "72c3ddeb-2e5b-4725-90c2-cfc745a8ff8f",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Assign specific roles and tasks to team members for the current project",
+      "dueDate": "2025-08-12",
+      "createdAt": "2025-08-08T09:10:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "34b5d3b7-b95b-4f9c-a95e-20bb06e94dfb",
+      "title": "Follow-Up on Pending Tasks",
+      "boardId": "72c3ddeb-2e5b-4725-90c2-cfc745a8ff8f",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "description": "Follow up with the team members regarding pending tasks",
+      "dueDate": "2025-08-15",
+      "createdAt": "2025-08-08T09:20:00.000Z",
       "completed": false
     }
   ],
@@ -89,17 +173,32 @@
     {
       "id": "419a7772-9c18-4d83-b608-5edd51e235cf",
       "name": "Go for Walk",
-      "userId": "1754633181437"
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
     },
     {
       "id": "4aced383-b271-405b-a17f-0388fc627f53",
       "name": "Work On Project",
-      "userId": "1754633181437"
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
     },
     {
       "id": "db076f40-92b2-4a4c-b864-c95549a46cf0",
       "name": "Talk To Client",
-      "userId": "1754633181437"
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
+    },
+    {
+      "id": "b1d7c92f-69a2-4ac2-9498-4c6b8f914678",
+      "name": "Prepare for Presentation",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
+    },
+    {
+      "id": "ec9123b1-cf73-4fa0-9234-51c8ff2de16c",
+      "name": "Plan Marketing Strategy",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
+    },
+    {
+      "id": "72c3ddeb-2e5b-4725-90c2-cfc745a8ff8f",
+      "name": "Team Coordination",
+      "userId": "19f6718f-57d2-49d9-8020-22ec6b25b3b1"
     }
   ]
 }
