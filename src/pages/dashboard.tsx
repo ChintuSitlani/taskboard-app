@@ -117,22 +117,23 @@ export default function DashboardPage({
             <main className="container mx-auto p-4">
                 <div className="mb-6">
                     <h1 className="text-2xl font-bold mb-4">My Task Boards</h1>
-                    <div className="flex space-x-2 mb-4">
+                    <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mb-4">
                         <input
                             type="text"
                             value={newBoardName}
                             onChange={(e) => setNewBoardName(e.target.value)}
                             placeholder="New board name"
-                            className="flex-1 p-2 border rounded"
-                            onKeyDown={(e) => e.key === "Enter" && handleCreateBoard()}// onKeyPress is deprecated in React 17+ (including React 18+). using this as alternative
+                            className="w-full sm:flex-1 p-2 border rounded"
+                            onKeyDown={(e) => e.key === "Enter" && handleCreateBoard()}
                         />
                         <button
                             onClick={handleCreateBoard}
-                            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                            className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 sm:px-4 sm:text-base"
                         >
                             Create Board
                         </button>
                     </div>
+
                 </div>
 
                 {boards.length === 0 ? (

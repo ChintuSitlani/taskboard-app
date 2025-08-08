@@ -138,13 +138,34 @@ export default function BoardPage({
       <Navbar user={user} />
       <main className="container mx-auto p-4">
         <div className="mb-6">
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
             <h1 className="text-2xl font-bold">{board.name}</h1>
+
             <button
               onClick={() => router.push("/dashboard")}
-              className="text-blue-500 hover:text-blue-700"
+              className="text-blue-500 hover:text-blue-700 flex items-center text-sm sm:text-base"
             >
-              Back to all boards
+              {/* back icon  for Mobile  */}
+              <span className="sm:hidden inline-flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 mr-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                Back
+              </span>
+
+              {/* Text for larger screens */}
+              <span className="hidden sm:inline">Back to all boards</span>
             </button>
           </div>
 
@@ -156,28 +177,28 @@ export default function BoardPage({
                 value={newTaskTitle}
                 onChange={(e) => setNewTaskTitle(e.target.value)}
                 placeholder="Task title"
-                className="w-full p-2 border rounded"
-                onKeyPress={(e) => e.key === "Enter" && handleCreateTask()}
+                className="w-full p-2 border rounded text-sm"
+                onKeyDown={(e) => e.key === "Enter" && handleCreateTask()} // using onKeyDown instead of onKeyPress
               />
               <textarea
                 value={newTaskDescription}
                 onChange={(e) => setNewTaskDescription(e.target.value)}
                 placeholder="Description (optional)"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded text-sm"
                 rows={2}
               />
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2 gap-2">
                 <label className="text-sm text-gray-600">Due date:</label>
                 <input
                   type="date"
                   value={newTaskDueDate}
                   onChange={(e) => setNewTaskDueDate(e.target.value)}
-                  className="p-1 border rounded"
+                  className="p-2 border rounded text-sm w-full sm:w-auto"
                 />
               </div>
               <button
                 onClick={handleCreateTask}
-                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                className="w-full sm:w-auto bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 text-sm sm:text-base"
               >
                 Add Task
               </button>
@@ -185,6 +206,7 @@ export default function BoardPage({
           </div>
         </div>
 
+        {/*Task List */}
         <div className="space-y-3">
           {tasks.length === 0 ? (
             <div className="text-center py-8">
@@ -202,6 +224,7 @@ export default function BoardPage({
           )}
         </div>
       </main>
+
     </div>
   );
 }

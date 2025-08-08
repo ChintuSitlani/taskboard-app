@@ -26,18 +26,19 @@ export default function Navbar({ user }: NavbarProps) {
     };
 
     return (
-        <nav className="bg-gray-800 text-white p-4">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex items-center space-x-4">
-                    <Link href="/dashboard" className="text-xl font-bold">
-                        TaskBoards
-                    </Link>
-                </div>
-                <div className="flex items-center space-x-4">
-                    <span className="text-gray-300">Hi, {user.name}</span>
+        <nav className="bg-gray-800 text-white">
+            <div className="container mx-auto flex justify-between items-center p-4">
+                <Link href="/dashboard" className="text-xl font-bold">
+                    TaskBoards
+                </Link>
+
+                <div className="flex items-center space-x-2 sm:space-x-4">
+                    <span className="text-sm sm:text-base text-gray-300">
+                        Hi, {user.name}
+                    </span>
                     <button
                         onClick={handleLogout}
-                        className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded"
+                        className="bg-red-600 hover:bg-red-700 px-3 py-1 text-sm sm:text-base rounded"
                     >
                         Logout
                     </button>
