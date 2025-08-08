@@ -51,3 +51,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 │
 └tailwind.config.js
 └postcss.config.mjs
+
+---
+## LIVE DEMO
+    Open for LIVE DEMO[https://5pqr83-3000.csb.app/dashboard] (https://5pqr83-3000.csb.app/dashboard)
