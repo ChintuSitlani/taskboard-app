@@ -1,6 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+
+add .env and add variable JWT_SECRET and value(add whatever you want)'
 
 First, run the development server:
 
@@ -29,7 +30,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 │   │   │   ├── index.ts       // GET all tasks (for a board), POST task
 │   │   │   └── [id].ts        // GET, PUT, DELETE a task
 │   ├── _app.tsx               // Global wrapper + Tailwind CSS import
-│   ├── index.tsx              // Redirect to login or dashboard
 │   ├── login.tsx              // Login form
 │   ├── register.tsx           // Registration form
 │   ├── dashboard.tsx          // Protected page for listing boards
@@ -42,13 +42,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 │
 ├── /lib
 │   ├── auth.ts                // JWT verify/generate, getUserFromRequest()
-│   ├── db.ts                  // JSON object or in-memory data
-│   └── utils.ts               // Helper functions (optional)
+│   └── db.ts                  // JSON object or in-memory data
 │
 ├── /types
 │   ├── user.ts                // User type/interface
 │   ├── board.ts               // Board type
 │   └── task.ts                // Task type
 │
-tailwind.config.js
-postcss.config.js
+└tailwind.config.js
+└postcss.config.mjs

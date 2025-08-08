@@ -1,4 +1,3 @@
-// components/BoardCard.tsx
 import Link from "next/link";
 import { Board } from "@/types/board";
 
