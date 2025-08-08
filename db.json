@@ -1,0 +1,105 @@
+{
+  "users": [
+    {
+      "id": "1754633181437",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "$2b$10$nQ5mTISSp2UuWVKUWuRM5.ha6C2tdpBVzKaXU/w2gN0ZaELoIfh9e"
+    },
+    {
+      "id": "19f6718f-57d2-49d9-8020-22ec6b25b3b1",
+      "name": "Chandra Prakash",
+      "email": "chintusitlani09@gmail.com",
+      "password": "$2b$10$C6oZvijsATksLHgwkJqHjee80f57pTh2JCbgYnT4r0K/IZkJ5zjBO"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1f724e08-e318-4ce2-877a-1a4a918d2751",
+      "title": "Go for a quick walk",
+      "boardId": "419a7772-9c18-4d83-b608-5edd51e235cf",
+      "userId": "1754633181437",
+      "description": "go for a quick evening walk for 10 min. complete atleast 4000 steps",
+      "dueDate": "2025-08-10",
+      "createdAt": "2025-08-08T06:41:02.266Z",
+      "completed": false
+    },
+    {
+      "id": "b8d0a388-30ab-420e-8471-3274316edbc9",
+      "title": "Work on design",
+      "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
+      "userId": "1754633181437",
+      "description": "Work on design of the json project",
+      "dueDate": "2025-08-13",
+      "createdAt": "2025-08-08T06:56:53.894Z",
+      "completed": false
+    },
+    {
+      "id": "a26a45ca-deb9-4ea2-8ff7-cb09f406e2cc",
+      "title": "Create Git Repo",
+      "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
+      "userId": "1754633181437",
+      "description": "Create git repo for the project",
+      "dueDate": "2025-08-12",
+      "createdAt": "2025-08-08T06:57:21.302Z",
+      "completed": false
+    },
+    {
+      "id": "4ab04dee-bdf0-475f-845f-e898fd6893c7",
+      "title": "Add JWT auth",
+      "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
+      "userId": "1754633181437",
+      "description": "Add JWT auth for users authentication",
+      "dueDate": "2025-08-21",
+      "createdAt": "2025-08-08T06:58:06.109Z",
+      "completed": false
+    },
+    {
+      "id": "d88aebae-f601-4091-b90f-ed15bf6f107b",
+      "title": "Get Requirement",
+      "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
+      "userId": "1754633181437",
+      "description": "Get requirement from the client for the projects",
+      "dueDate": "2025-08-12",
+      "createdAt": "2025-08-08T06:58:58.364Z",
+      "completed": true
+    },
+    {
+      "id": "7f716d45-13d1-4905-8e88-299340c86b02",
+      "title": "Delegate Task to others",
+      "boardId": "4aced383-b271-405b-a17f-0388fc627f53",
+      "userId": "1754633181437",
+      "description": "-Delegate task \n--DataBase setup delegate to Deepak\n--Backend and server setup to vishal and mansi ",
+      "dueDate": "2025-08-29",
+      "createdAt": "2025-08-08T06:59:13.001Z",
+      "completed": false
+    },
+    {
+      "id": "1787ffb7-ee7a-4355-8aa1-2443d0c1ce66",
+      "title": "Get Client Review",
+      "boardId": "db076f40-92b2-4a4c-b864-c95549a46cf0",
+      "userId": "1754633181437",
+      "description": "Get Client review on new designs",
+      "dueDate": "2025-08-16",
+      "createdAt": "2025-08-08T07:01:40.109Z",
+      "completed": false
+    }
+  ],
+  "boards": [
+    {
+      "id": "419a7772-9c18-4d83-b608-5edd51e235cf",
+      "name": "Go for Walk",
+      "userId": "1754633181437"
+    },
+    {
+      "id": "4aced383-b271-405b-a17f-0388fc627f53",
+      "name": "Work On Project",
+      "userId": "1754633181437"
+    },
+    {
+      "id": "db076f40-92b2-4a4c-b864-c95549a46cf0",
+      "name": "Talk To Client",
+      "userId": "1754633181437"
+    }
+  ]
+}

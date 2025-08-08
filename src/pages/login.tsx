@@ -61,7 +61,7 @@ export default function LoginPage() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-6"
             >
-                <h2 className="text-3xl font-bold text-center text-grey-700">Login</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-700">Login</h2>
 
                 <InputField
                     labelText="Email"
